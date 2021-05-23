@@ -5,13 +5,12 @@ import './styles.css';
 import './poker_styles.css';
 
 import typeColors from '../types/pokemonTypes';
-
+import typeImage from '../types/typeImages';
 
 const ListPoke = (props) => {
     const { id, name, height, weight, nomeTipoUm, nomeTipoDois, vida } = props;
 
-
-    if (!id) {
+    if (!typeImage[nomeTipoUm.name]) {
         return (
             <div className="user_card" style={{ backgroundColor: '#1cabf2', boxShadow: 'none', marginTop: '-25px' }}>
                 <div className="pokebola">
@@ -20,6 +19,7 @@ const ListPoke = (props) => {
             </div>
         )
     }
+
 
     let tamanho = height;
     let peso = weight / 10;
@@ -46,7 +46,7 @@ const ListPoke = (props) => {
                         borderRadius: '100px',
                         borderStyle: 'solid',
                         borderColor: typeColors[nomeTipoUm.name],
-                         
+                        background: `url(${typeImage[nomeTipoUm.name]}) center`,
                         borderWidth: '10px'
                     }}>
                         <img alt="img-pokemon" className="image-api"
@@ -106,8 +106,8 @@ const ListPoke = (props) => {
                 <div className="brand_logo_container" style={{
                     borderRadius: '100px',
                     borderStyle: 'solid',
-                    
                     borderColor: typeColors[nomeTipoUm.name],
+                    background: `url(${typeImage[nomeTipoUm.name]}) center`,
                     borderWidth: '10px'
                 }}>
                     <img alt="img-pokemon" className="image-api"
@@ -145,7 +145,6 @@ const ListPoke = (props) => {
 
         </div>
     )
-
 }
 export default ListPoke;
 

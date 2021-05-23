@@ -7,11 +7,14 @@ import AutoSuggest from "react-autosuggest";
 import { notification } from 'antd';
 
 import 'antd/dist/antd.css';
+import '../list/poker_styles.css';
 import './styles.css';
 import './suggest.css';
 
 
 const SearthPokemons = () => {
+
+    const [loading, setLoading] = useState(false)
 
     const [value, setValue] = useState("");
     const [suggestions, setSuggestions] = useState([]);
@@ -44,9 +47,14 @@ const SearthPokemons = () => {
         setVida([])
     }
 
-    
+
 
     const pokemonHandle = (event) => {
+        setLoading(true)
+        setTimeout(() => {
+            setLoading(false);
+        }, 2500)
+
         event.preventDefault();
         const dados = GetPokemon(primeiraLetraMinuscula(value))
         dados.catch((error) => { openErrorNotification('error') })
@@ -57,11 +65,14 @@ const SearthPokemons = () => {
             setNomeTipoUm(props['types'][0].type)
             setNomeTipoDois(props['types'][1].type)
 
+        
+
         }).catch((error) => {
 
         })
     }
 
+    console.log()
     const lowerCasedCompanies = pokemons.map(x => x.name.toLowerCase());
 
     function getSuggestions(value) {
@@ -86,6 +97,11 @@ const SearthPokemons = () => {
                         setSuggestions(getSuggestions(value));
                     }}
                     onSuggestionSelected={(_, { suggestionValue }) => {
+                        setLoading(true)
+                        setTimeout(() => {
+                            setLoading(false);
+                        }, 2500)
+
                         setValue(suggestionValue);
                         const data = GetPokemon(suggestionValue)
                         data.then((props) => {
@@ -103,7 +119,7 @@ const SearthPokemons = () => {
                     getSuggestionValue={suggestion => suggestion}
                     renderSuggestion={suggestion => <div>{suggestion}</div>}
                     inputProps={{
-                        placeholder: "",
+                        placeholder: "Searth pokemon",
                         value: value,
                         onChange: (_, { newValue, method }) => {
                             setValue(newValue)
@@ -119,10 +135,19 @@ const SearthPokemons = () => {
                         onClick={pokemonHandle} />
                 </div>
             </form>
-            <ListPoke {...poke}
-                nomeTipoUm={nomeTipoUm}
-                nomeTipoDois={nomeTipoDois}
-                vida={vida} />
+            {loading ?
+
+                <div className="user_card" style={{ backgroundColor: '#1cabf2', boxShadow: 'none', marginTop: '-25px' }}>
+                    <div className="pokebola">
+                        <div className="pokebola-botao"></div>
+                    </div>
+                </div>
+                :
+                <ListPoke {...poke}
+                    nomeTipoUm={nomeTipoUm}
+                    nomeTipoDois={nomeTipoDois}
+                    vida={vida} />
+            }
         </div>
     )
 
