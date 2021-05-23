@@ -9,6 +9,7 @@ import typeImage from '../types/typeImages';
 
 const ListPoke = (props) => {
     const { id, name, height, weight, nomeTipoUm, nomeTipoDois, vida } = props;
+    const url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`
 
     if (!typeImage[nomeTipoUm.name]) {
         return (
@@ -19,7 +20,6 @@ const ListPoke = (props) => {
             </div>
         )
     }
-
 
     let tamanho = height;
     let peso = weight / 10;
@@ -42,6 +42,7 @@ const ListPoke = (props) => {
                 borderWidth: '10px'
             }}>
                 <div className="d-flex justify-content-center">
+
                     <div className="brand_logo_container" style={{
                         borderRadius: '100px',
                         borderStyle: 'solid',
@@ -50,9 +51,10 @@ const ListPoke = (props) => {
                         borderWidth: '10px'
                     }}>
                         <img alt="img-pokemon" className="image-api"
-                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
+                            src={url}
                         />
                     </div>
+
                 </div>
                 <div className="d-flex justify-content-center form_container">
                     <form>
@@ -88,8 +90,6 @@ const ListPoke = (props) => {
                         }}>{nomeTipoDois.name}</button>
                     </form>
                 </div>
-
-
             </div>
         )
     }
@@ -111,7 +111,7 @@ const ListPoke = (props) => {
                     borderWidth: '10px'
                 }}>
                     <img alt="img-pokemon" className="image-api"
-                        src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
+                        src={url}
                     />
                 </div>
             </div>

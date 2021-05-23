@@ -53,7 +53,7 @@ const SearthPokemons = () => {
         setLoading(true)
         setTimeout(() => {
             setLoading(false);
-        }, 2500)
+        }, 3500)
 
         event.preventDefault();
         const dados = GetPokemon(primeiraLetraMinuscula(value))
@@ -65,14 +65,11 @@ const SearthPokemons = () => {
             setNomeTipoUm(props['types'][0].type)
             setNomeTipoDois(props['types'][1].type)
 
-        
-
         }).catch((error) => {
 
         })
     }
-
-    console.log()
+    
     const lowerCasedCompanies = pokemons.map(x => x.name.toLowerCase());
 
     function getSuggestions(value) {
@@ -84,7 +81,6 @@ const SearthPokemons = () => {
         var nomePokemon = string.charAt(0).toLowerCase() + string.slice(1);
         return nomePokemon;
     }
-
 
     return (
         <div className="searth">
@@ -100,7 +96,7 @@ const SearthPokemons = () => {
                         setLoading(true)
                         setTimeout(() => {
                             setLoading(false);
-                        }, 2500)
+                        }, 3500)
 
                         setValue(suggestionValue);
                         const data = GetPokemon(suggestionValue)
@@ -135,7 +131,7 @@ const SearthPokemons = () => {
                         onClick={pokemonHandle} />
                 </div>
             </form>
-            {loading ?
+            { loading ?
 
                 <div className="user_card" style={{ backgroundColor: '#1cabf2', boxShadow: 'none', marginTop: '-25px' }}>
                     <div className="pokebola">
@@ -146,7 +142,7 @@ const SearthPokemons = () => {
                 <ListPoke {...poke}
                     nomeTipoUm={nomeTipoUm}
                     nomeTipoDois={nomeTipoDois}
-                    vida={vida} />
+                    vida={vida}/>
             }
         </div>
     )
