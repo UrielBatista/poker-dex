@@ -23,8 +23,11 @@
       border-radius: 50%;
       box-shadow: inset -10px 10px 0 10px rgba(0, 0, 0, 0.1);
       overflow: hidden;
-      animation: gira 4s infinite;
+      animation: gira 3s infinite;
       margin: 20px auto;
+  }
+  .pokebola {
+    transform: rotate(-90deg);
   }
   .pokebola:before, .pokebola:after {
       content: "";
@@ -37,7 +40,7 @@
       border-left: 15px solid #000;
   }
   .pokebola:after {
-      top: calc(50% - 100px);
+      top: calc(50% - 10000px);
       width: 100%;
       height: 20px;
       background-color: #000;
@@ -67,10 +70,13 @@
   }
   
   @keyframes gira {
-    from {
-        transform: rotate(-85deg);
-      }
-      to {
-        transform: rotate(2068deg);
-      }
+        0% {
+          transform: rotate(-90deg);
+        }
+        50% {
+          transform: rotate(2086deg);
+        }
+        100% {
+            transform: rotate(-90deg);
+        }
   }

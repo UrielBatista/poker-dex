@@ -8,6 +8,7 @@ import { notification } from 'antd';
 
 import 'antd/dist/antd.css';
 import '../list/poker_styles.css';
+import '../list/loading_poker.css';
 import './styles.css';
 import './suggest.css';
 
@@ -53,7 +54,7 @@ const SearthPokemons = () => {
         setLoading(true)
         setTimeout(() => {
             setLoading(false);
-        }, 3500)
+        }, 4000)
 
         event.preventDefault();
         const dados = GetPokemon(primeiraLetraMinuscula(value))
@@ -96,7 +97,7 @@ const SearthPokemons = () => {
                         setLoading(true)
                         setTimeout(() => {
                             setLoading(false);
-                        }, 3500)
+                        }, 4000)
 
                         setValue(suggestionValue);
                         const data = GetPokemon(suggestionValue)
@@ -133,10 +134,10 @@ const SearthPokemons = () => {
             </form>
             {loading ?
 
-                <div className="user_poker" style={{ backgroundColor: '#1cabf2', boxShadow: 'none', marginTop: '-25px' }}>
-                    <div className="center-poker">
-                        <div className="pokebola">
-                            <div className="pokebola-botao"></div>
+                <div className="loading_user" style={{ backgroundColor: '#1cabf2', boxShadow: 'none', marginTop: '-25px' }}>
+                    <div className="centralizar_poker">
+                        <div className="loading_poker">
+                            <div className="loading_poker-button"></div>
                         </div>
                     </div>
                 </div>
