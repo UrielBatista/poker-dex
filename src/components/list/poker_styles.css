@@ -3,7 +3,17 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  
+    
+  .user_poker{
+      width: 350px;
+      height: 350px;
+      margin-top: 55px;
+      margin-left: -65px;
+  }
+  .center-poker{
+      margin-top: 150px;
+  }
+
   .pokebola {
       position: relative;
       width: 150px;

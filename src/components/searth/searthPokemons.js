@@ -69,7 +69,7 @@ const SearthPokemons = () => {
 
         })
     }
-    
+
     const lowerCasedCompanies = pokemons.map(x => x.name.toLowerCase());
 
     function getSuggestions(value) {
@@ -131,18 +131,20 @@ const SearthPokemons = () => {
                         onClick={pokemonHandle} />
                 </div>
             </form>
-            { loading ?
+            {loading ?
 
-                <div className="user_card" style={{ backgroundColor: '#1cabf2', boxShadow: 'none', marginTop: '-25px' }}>
-                    <div className="pokebola">
-                        <div className="pokebola-botao"></div>
+                <div className="user_poker" style={{ backgroundColor: '#1cabf2', boxShadow: 'none', marginTop: '-25px' }}>
+                    <div className="center-poker">
+                        <div className="pokebola">
+                            <div className="pokebola-botao"></div>
+                        </div>
                     </div>
                 </div>
                 :
                 <ListPoke {...poke}
                     nomeTipoUm={nomeTipoUm}
                     nomeTipoDois={nomeTipoDois}
-                    vida={vida}/>
+                    vida={vida} />
             }
         </div>
     )
