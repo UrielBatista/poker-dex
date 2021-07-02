@@ -49,7 +49,6 @@ const SearthPokemons = () => {
     }
 
 
-
     const pokemonHandle = (event) => {
         setLoading(true)
         setTimeout(() => {
@@ -110,7 +109,6 @@ const SearthPokemons = () => {
 
                         }).catch((error) => {
                             // console.log(error)
-
                         })
                     }}
                     getSuggestionValue={suggestion => suggestion}
