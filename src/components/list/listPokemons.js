@@ -115,6 +115,7 @@ const ListPoke = (props) => {
                     <img alt="img-pokemon" className="image-api"
                         src={url}
                     />
+                    
                 </div>
             </div>
             <div className="d-flex justify-content-center form_container">
