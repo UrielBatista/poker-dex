@@ -48,7 +48,6 @@ const SearthPokemons = () => {
         setVida([])
     }
 
-
     const pokemonHandle = (event) => {
         setLoading(true)
         setTimeout(() => {
@@ -108,7 +107,6 @@ const SearthPokemons = () => {
                             setNomeTipoDois(props['types'][1].type)
 
                         }).catch((error) => {
-                            // console.log(error)
                         })
                     }}
                     getSuggestionValue={suggestion => suggestion}
@@ -131,7 +129,6 @@ const SearthPokemons = () => {
                 </div>
             </form>
             {loading ?
-
                 <div className="loading_user" style={{ backgroundColor: '#1cabf2', boxShadow: 'none', marginTop: '-25px' }}>
                     <div className="centralizar_poker">
                         <div className="loading_poker">
