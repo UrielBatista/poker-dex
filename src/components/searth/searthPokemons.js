@@ -114,7 +114,7 @@ const SearthPokemons = () => {
                     getSuggestionValue={suggestion => suggestion}
                     renderSuggestion={suggestion => <div>{suggestion}</div>}
                     inputProps={{
-                        placeholder: "Searth pokemon",
+                        placeholder: "Search pokemon",
                         value: value,
                         onChange: (_, { newValue, method }) => {
                             setValue(newValue)
