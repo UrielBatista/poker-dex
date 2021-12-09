@@ -7,7 +7,7 @@ const typeImage = {
     ground: 'https://media4.giphy.com/media/l41lGzN3LbiqUKmR2/giphy.gif?cid=ecf05e47ac4ua714ps2x3w9id13duuegpqwyagzy5hg8p808&rid=giphy.gif&ct=g',
     normal: 'https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/masters/forest.jpg',
     psychic: 'https://media4.giphy.com/media/1smOzjU64WlTG/giphy.gif?cid=ecf05e47w81ypc4m4vjrc2jbipjykrbuyodzczvwneqyoyys&rid=giphy.gif&ct=g',
-    steel: 'https://media.giphy.com/media/qxHLSrcxxpwnwHOWqF/giphy.gif',
+    steel: 'https://media4.giphy.com/media/3FVSpxRtlTDx5cbJDv/giphy.gif?cid=ecf05e47xk9oloi7cxorawa188ob5g8r5d4mgeesmu0z9opk&rid=giphy.gif&ct=g',
     dark: 'https://media1.giphy.com/media/RlwF2vFb4y7bDnWvcO/giphy.gif?cid=ecf05e470nfh936yotpupa8qbushe6jnxmc1vcw6gytgk7m0&rid=giphy.gif&ct=g',
     electric: 'https://media2.giphy.com/media/CKlafeh1NAxz35KTq4/giphy.gif?cid=ecf05e47a850kt3x8ae4zqe8g7vyy97kpc14mxlm6wligz2d&rid=giphy.gif&ct=g',
     fighting: 'https://media.giphy.com/media/d4aVHC1HKnButuXC/giphy.gif',
@@ -15,7 +15,7 @@ const typeImage = {
     grass: 'https://media.giphy.com/media/3o7aCRZYNerX4ovPwI/giphy.gif',
     ice: 'https://media4.giphy.com/media/12wteMTXxjLaVO/giphy.gif?cid=ecf05e47wygspzhakxvmx6z0rh1jptcez3oanrb474kzo8vq&rid=giphy.gif&ct=g',
     poison: 'https://media.giphy.com/media/uOU9gua9nugXirZicd/giphy.gif',
-    rock: 'https://media.giphy.com/media/11v1PDfWV0aOI/giphy.gif',
+    rock: 'https://media4.giphy.com/media/JmJ0RA2x2m7gfqMYMz/giphy.gif?cid=790b761164bee6d1699ef2bda9d0d956994c168f38263fb9&rid=giphy.gif&ct=g',
     water: 'https://media.giphy.com/media/h6x0ROdzJy4TKyUu1b/giphy.gif'
 }
 

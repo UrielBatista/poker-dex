@@ -51,7 +51,7 @@ const ListPoke = (props) => {
                         <div className="front">
                             <div className="front-component" style={{
                                 width: '110%',
-                                height: '110%',
+                                height: '150%',
                                 background: `url(${typeImage[nomeTipoUm.name]}) center`,
                                 borderRadius: '20px',
                                 borderStyle: 'solid',
@@ -62,7 +62,6 @@ const ListPoke = (props) => {
                                     backgroundColor: typeColors[nomeTipoUm.name],
                                 }}><img src={url} /></div>
                                 <button type="button" name="button" className="btn name_btn" style={{
-                                    backgroundColor: '#e4e4e4',
                                     marginBottom: '15px',
                                     marginTop: '5px',
                                     width: '90%',
@@ -70,13 +69,13 @@ const ListPoke = (props) => {
                                     border: 'solid',
                                     borderColor: typeColors[nomeTipoUm.name],
                                     padding: '0.3rem'
-                                }}>{<strong>{nome}</strong>}</button>
+                                }}>{nome}</button>
                             </div>
                         </div>
                         <div class="back">
                             <div style={{
                                 width: '110%',
-                                height: '110%',
+                                height: '150%',
                                 backgroundColor: '#282828',
                                 borderRadius: '20px',
                                 borderStyle: 'solid',
@@ -126,7 +125,7 @@ const ListPoke = (props) => {
                                         marginLeft: '210px',
                                         color: 'white'
                                     }}>
-                                        <strong>{vida} Hp</strong>
+                                        {vida} Hp
                                     </div>
                                 </div>
                                 <div className="progress-bar">
@@ -170,7 +169,7 @@ const ListPoke = (props) => {
                                         marginLeft: '210px',
                                         color: 'white'
                                     }}>
-                                        <strong>{peso} Kg</strong>
+                                       {peso} Kg
                                     </div>
                                 </div>
                                 <div className="progress-bar">
@@ -196,20 +195,20 @@ const ListPoke = (props) => {
                                         marginLeft: '210px',
                                         color: 'white'
                                     }}>
-                                        <strong>{tamanho} M</strong>
+                                        {tamanho} M
                                     </div>
                                 </div>
                                 <div>
                                     <button type="button" name="button" style={{
                                         backgroundColor: typeColors[nomeTipoUm.name],
                                         borderRadius: '10px',
-                                        padding: '0.1rem',
+                                        padding: '0.3rem',
                                         border: 'none'
                                     }}>{nomeTipoUm.name}</button>
                                     <button type="button" name="button" style={{
                                         backgroundColor: typeColors[nomeTipoDois.name],
                                         borderRadius: '10px',
-                                        padding: '0.1rem',
+                                        padding: '0.3rem',
                                         marginLeft: '8px',
                                         border: 'none'
 
@@ -234,7 +233,7 @@ const ListPoke = (props) => {
                     <div className="front">
                         <div className="front-component" style={{
                             width: '110%',
-                            height: '125%',
+                            height: '150%',
                             background: `url(${typeImage[nomeTipoUm.name]}) center`,
                             borderRadius: '20px',
                             borderStyle: 'solid',
@@ -245,7 +244,6 @@ const ListPoke = (props) => {
                                 backgroundColor: typeColors[nomeTipoUm.name],
                             }}><img src={url} /></div>
                             <button type="button" name="button" className="btn name_btn" style={{
-                                backgroundColor: '#e4e4e4',
                                 marginBottom: '15px',
                                 marginTop: '5px',
                                 width: '90%',
@@ -253,13 +251,13 @@ const ListPoke = (props) => {
                                 border: 'solid',
                                 borderColor: typeColors[nomeTipoUm.name],
                                 padding: '0.3rem'
-                            }}>{<strong>{nome}</strong>}</button>
+                            }}>{nome}</button>
                         </div>
                     </div>
                     <div class="back">
                         <div style={{
                             width: '110%',
-                            height: '110%',
+                            height: '150%',
                             backgroundColor: '#282828',
                             borderRadius: '20px',
                             borderStyle: 'solid',
@@ -267,126 +265,126 @@ const ListPoke = (props) => {
                             borderWidth: '10px'
                         }}>
                             <div className="progress-bar">
-                                    <ProgressBar
-                                        percent={vida}
-                                        width="190px"
-                                        filledBackground="linear-gradient(to right, #fefb72, #f0bb31)"
+                                <ProgressBar
+                                    percent={vida}
+                                    width="190px"
+                                    filledBackground="linear-gradient(to right, #fefb72, #f0bb31)"
 
-                                    >
-                                        <Step transition="scale">
-                                            {({ accomplished }) => (
-                                                <img
-                                                    style={{ filter: `grayscale(${accomplished ? 0 : 100}%)` }}
-                                                    width="30"
-                                                    src="https://static.wikia.nocookie.net/pkmnshuffle/images/7/7d/No_Hearts_Needed.png"
-                                                />
+                                >
+                                    <Step transition="scale">
+                                        {({ accomplished }) => (
+                                            <img
+                                                style={{ filter: `grayscale(${accomplished ? 0 : 100}%)` }}
+                                                width="30"
+                                                src="https://static.wikia.nocookie.net/pkmnshuffle/images/7/7d/No_Hearts_Needed.png"
+                                            />
 
-                                            )}
-                                        </Step>
-                                        <Step transition="scale">
-                                            {({ accomplished }) => (
-                                                <img
-                                                    style={{ filter: `grayscale(${accomplished ? 0 : 150}%)` }}
-                                                    width="30"
-                                                    src="https://static.wikia.nocookie.net/pkmnshuffle/images/1/1c/Heart_Recovery.png"
-                                                />
-                                            )}
-                                        </Step>
-                                        <Step transition="scale">
-                                            {({ accomplished }) => (
-                                                <img
-                                                    style={{ filter: `grayscale(${accomplished ? 0 : 200}%)` }}
-                                                    width="30"
-                                                    src="https://static.wikia.nocookie.net/pkmnshuffle/images/d/d2/Superior_Super_Catch_Time.png"
-                                                />
-                                            )}
-                                        </Step>
+                                        )}
+                                    </Step>
+                                    <Step transition="scale">
+                                        {({ accomplished }) => (
+                                            <img
+                                                style={{ filter: `grayscale(${accomplished ? 0 : 150}%)` }}
+                                                width="30"
+                                                src="https://static.wikia.nocookie.net/pkmnshuffle/images/1/1c/Heart_Recovery.png"
+                                            />
+                                        )}
+                                    </Step>
+                                    <Step transition="scale">
+                                        {({ accomplished }) => (
+                                            <img
+                                                style={{ filter: `grayscale(${accomplished ? 0 : 200}%)` }}
+                                                width="30"
+                                                src="https://static.wikia.nocookie.net/pkmnshuffle/images/d/d2/Superior_Super_Catch_Time.png"
+                                            />
+                                        )}
+                                    </Step>
 
-                                    </ProgressBar>
-                                    <div style={{
-                                        fontSize: '13px',
-                                        marginTop: '-15px',
-                                        marginLeft: '210px',
-                                        color: 'white'
-                                    }}>
-                                        <strong>{vida} Hp</strong>
-                                    </div>
+                                </ProgressBar>
+                                <div style={{
+                                    fontSize: '13px',
+                                    marginTop: '-15px',
+                                    marginLeft: '210px',
+                                    color: 'white'
+                                }}>
+                                    {vida} Hp
                                 </div>
-                                <div className="progress-bar">
-                                    <ProgressBar
-                                        percent={peso}
-                                        width="190px"
-                                        filledBackground="linear-gradient(to right, #fefb72, #f0bb31)"
+                            </div>
+                            <div className="progress-bar">
+                                <ProgressBar
+                                    percent={peso}
+                                    width="190px"
+                                    filledBackground="linear-gradient(to right, #fefb72, #f0bb31)"
 
-                                    >
-                                        <Step transition="scale">
-                                            {({ accomplished }) => (
-                                                <img
-                                                    style={{ filter: `grayscale(${accomplished ? 0 : 100}%)` }}
-                                                    width="30"
-                                                    src="https://cdn-icons-png.flaticon.com/512/188/188950.png"
-                                                />
-                                            )}
-                                        </Step>
-                                        <Step transition="scale">
-                                            {({ accomplished }) => (
-                                                <img
-                                                    style={{ filter: `grayscale(${accomplished ? 0 : 150}%)` }}
-                                                    width="30"
-                                                    src="https://cdn-icons-png.flaticon.com/512/188/188969.png"
-                                                />
-                                            )}
-                                        </Step>
-                                        <Step transition="scale">
-                                            {({ accomplished }) => (
-                                                <img
-                                                    style={{ filter: `grayscale(${accomplished ? 0 : 200}%)` }}
-                                                    width="30"
-                                                    src="https://cdn-icons-png.flaticon.com/512/188/188951.png"
-                                                />
-                                            )}
-                                        </Step>
-                                    </ProgressBar>
-                                    <div style={{
-                                        fontSize: '13px',
-                                        marginTop: '-15px',
-                                        marginLeft: '210px',
-                                        color: 'white'
-                                    }}>
-                                        <strong>{peso} Kg</strong>
-                                    </div>
+                                >
+                                    <Step transition="scale">
+                                        {({ accomplished }) => (
+                                            <img
+                                                style={{ filter: `grayscale(${accomplished ? 0 : 100}%)` }}
+                                                width="30"
+                                                src="https://cdn-icons-png.flaticon.com/512/188/188950.png"
+                                            />
+                                        )}
+                                    </Step>
+                                    <Step transition="scale">
+                                        {({ accomplished }) => (
+                                            <img
+                                                style={{ filter: `grayscale(${accomplished ? 0 : 150}%)` }}
+                                                width="30"
+                                                src="https://cdn-icons-png.flaticon.com/512/188/188969.png"
+                                            />
+                                        )}
+                                    </Step>
+                                    <Step transition="scale">
+                                        {({ accomplished }) => (
+                                            <img
+                                                style={{ filter: `grayscale(${accomplished ? 0 : 200}%)` }}
+                                                width="30"
+                                                src="https://cdn-icons-png.flaticon.com/512/188/188951.png"
+                                            />
+                                        )}
+                                    </Step>
+                                </ProgressBar>
+                                <div style={{
+                                    fontSize: '13px',
+                                    marginTop: '-15px',
+                                    marginLeft: '210px',
+                                    color: 'white'
+                                }}>
+                                    {peso} Kg
                                 </div>
-                                <div className="progress-bar">
-                                    <ProgressBar
-                                        percent={tamanhoPercent}
-                                        width="190px"
-                                        filledBackground="linear-gradient(to right, #fefb72, #f0bb31)"
+                            </div>
+                            <div className="progress-bar">
+                                <ProgressBar
+                                    percent={tamanhoPercent}
+                                    width="190px"
+                                    filledBackground="linear-gradient(to right, #fefb72, #f0bb31)"
 
-                                    >
-                                        <Step transition="scale">
-                                            {({ accomplished }) => (
-                                                <img
-                                                    style={{ filter: `grayscale(${accomplished ? 0 : 10}%)` }}
-                                                    width="30"
-                                                    src="https://cdn-icons-png.flaticon.com/512/188/188919.png"
-                                                />
-                                            )}
-                                        </Step>
-                                    </ProgressBar>
-                                    <div style={{
-                                        fontSize: '13px',
-                                        marginTop: '-15px',
-                                        marginLeft: '210px',
-                                        color: 'white'
-                                    }}>
-                                        <strong>{tamanho} M</strong>
-                                    </div>
+                                >
+                                    <Step transition="scale">
+                                        {({ accomplished }) => (
+                                            <img
+                                                style={{ filter: `grayscale(${accomplished ? 0 : 10}%)` }}
+                                                width="30"
+                                                src="https://cdn-icons-png.flaticon.com/512/188/188919.png"
+                                            />
+                                        )}
+                                    </Step>
+                                </ProgressBar>
+                                <div style={{
+                                    fontSize: '13px',
+                                    marginTop: '-15px',
+                                    marginLeft: '210px',
+                                    color: 'white',
+                                }}>
+                                    {tamanho} M
                                 </div>
+                            </div>
                             <div>
                                 <button type="button" name="button" style={{
                                     backgroundColor: typeColors[nomeTipoUm.name],
                                     borderRadius: '10px',
-                                    padding: '0.1rem',
+                                    padding: '0.3rem',
                                     border: 'none'
                                 }}>{nomeTipoUm.name}</button>
                             </div>
